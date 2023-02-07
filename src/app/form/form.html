@@ -1,0 +1,73 @@
+<form [formGroup]="form">
+    <div class="container text-center p-5 col-lg-6 col-md-12 col-sm-12">
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="inputName" placeholder="Name" formControlName="name"
+                    [(ngModel)]="name">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="inputLastName" placeholder="Last Name"
+                    formControlName="lName" [(ngModel)]="lName">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" formControlName="email"
+                    [(ngModel)]="email">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <select id="inputHobbies" class="form-control" formControlName="hobbie" [(ngModel)]="hobbie">
+                    <option value="" disabled selected>Hobbies</option>
+                    <option>Lopta</option>
+                    <option>Kosarka</option>
+                    <option>Tapta</option>
+                </select>
+            </div>
+        </div>
+        <button (click)="resetForm()" type="reset" class="btn btn-secondary m-2">Reset</button>
+        <button (click)="showOutput()" type="submit" class="btn btn-danger">{{ showResult ? 'Hide' : 'View' }}</button>
+
+    </div>
+</form>
+
+<div id="showhide" class="container text-center p-5 col-lg-6 col-md-12 col-sm-12" *ngIf="showResult">
+    <div class="row">
+        <h3>Result:</h3>
+        <textarea #textareaRef ngClass="output" rows="5" readonly>
+        {{name}} {{lName}}
+        {{email}}
+        {{hobbie}}
+  </textarea>
+
+    </div>
+    <div class="row">
+        <button (click)="clearTextarea(textareaRef)" type="reset" class="btn btn-secondary mt-2 mb-2">Remove</button>
+        <button (click)="postFormData()" type="submit" class="btn btn-danger" data-bs-toggle="modal"
+            data-bs-target="#alertModal">Save</button>
+    </div>
+</div>
+
+
+<!-- Modal Window For Alerting user  -->
+<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Form data saved successfully</h5>
+            </div>
+            <div class="modal-body">
+                To preview the form data, please visit the List Page
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" routerLink="/list">See List
+                    Page</button>
+            </div>
+        </div>
+    </div>
+</div>

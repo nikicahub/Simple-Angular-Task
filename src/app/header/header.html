@@ -1,0 +1,13 @@
+<nav class="navbar bg-body-tertiary navbar-light bg-light sticky-top p-3">
+  <div class="container">
+    <img src="assets/talentlyft-logo.png" routerLink="/" alt="" width="150px">
+    <div class="navbar-nav mt-4">
+      <li class="nav-item">
+        <a class="nav-link" [ngClass]="{'active': isActive('/form')}" aria-current="page" routerLink="/form">Form Page</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [ngClass]="{'active': isActive('/list')}" aria-current="page" routerLink="/list">List Page</a>
+      </li>
+    </div>
+  </div>
+</nav>

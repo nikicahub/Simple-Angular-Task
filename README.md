@@ -1,4 +1,11 @@
-# InterviewA02
+# InterviewA02 
+*Nikica Kovacevic*
+*Start Date: 07.02.23*
+*End Date: 07.02.23*
+
+## Local DB with JSON used
+Installation: npm install -g json-server
+Start command: json-server --watch db.json
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
 

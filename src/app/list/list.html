@@ -1,0 +1,21 @@
+<div class="container mt-5">
+<table class="table">
+    <thead>
+        <tr id="table-headings">
+            <th class="col-lg-3 col-md-3">Name</th>
+            <th class="col-lg-3 col-md-3">Last Name</th>
+            <th class="col-lg-3 col-md-3">Email</th>
+            <th class="col-lg-3 col-md-3">Hobbies</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of formData" class="table-row shadow-sm">
+            <td class="d-none">{{ row.id }}</td>
+            <td class="col-lg-3 col-md-3">{{ row.name}}</td>
+            <td class="col-lg-3 col-md-3">{{ row.lName}}</td>
+            <td class="col-lg-3 col-md-3">{{ row.email}}</td>
+            <td class="col-lg-3 col-md-3">{{ row.hobbie}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,61 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "Palma",
+      "lName": "DeNova",
+      "email": "pdenova@gmail.com",
+      "hobbie": "Lopta",
+      "id": 2
+    },
+    {
+      "name": "Nikola",
+      "lName": "Mauz",
+      "email": "nmauz@gmail.com",
+      "hobbie": "Kosarka",
+      "id": 3
+    },
+    {
+      "name": "Micheal",
+      "lName": "Jordan",
+      "email": "mjordan@yahoo.com",
+      "hobbie": "Kosarka",
+      "id": 4
+    },
+    {
+      "name": "Steven",
+      "lName": "Seagal",
+      "email": "ssgal@monkey.com",
+      "hobbie": "Lopta",
+      "id": 5
+    },
+    {
+      "name": "Mirko",
+      "lName": "Darkovic",
+      "email": "mdarokiv@hotmail.com",
+      "hobbie": "Tapta",
+      "id": 6
+    },
+    {
+      "name": "Nikica",
+      "lName": "Kovacevic",
+      "email": "zanikicu@gmail.com",
+      "hobbie": "Kosarka",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

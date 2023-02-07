@@ -1,0 +1,26 @@
+.navbar-nav {
+    display: inline;
+
+    li {
+        display: inline-block;
+        margin-left: 20px;
+        font-size: 20px;
+.nav-link.active{
+    color: #f63559;
+}
+        a,
+        .nav-link {
+            color: #000;
+            font-weight: 500;
+            opacity: 1;
+
+            &:hover {
+                color: #f63559 !important;
+            }
+
+            &:active {
+                color: #f63559 !important;
+            }
+        }
+    }
+}
